@@ -48,6 +48,7 @@ footer{
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
+    
 
 }
 
@@ -64,7 +65,6 @@ footer{
     
     display: flex;
     justify-content: flex-start;
-    
     font-size: 18px;
     line-height: 22px;
     color: #062a35;
@@ -78,6 +78,40 @@ footer{
     display: inline-block;
     margin-left:25px;
 }
+
+.navbar-middle li:hover {
+    cursor: pointer;
+    color:#ea5822;
+}
+
+.navbar-middle li:hover > .navbar-middle-dropdown{
+    display: flex;
+}
+
+.navbar-middle-dropdown{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background-color: white;
+    color: #5b7076;
+    justify-content: flex-end;
+    border-top:4px solid #ea5822;
+}
+
+.navbar-middle-dropdown:hover{
+    display: flex;
+}
+
+.navbar-middle-dropdown li {
+    margin:0;
+    padding:10px;
+}
+
+.navbar-middle-dropdown li:hover {
+    color:white;
+    background-color: #ea5822;
+}
+
 
 .navbar-middle .fas {
     margin-left: 4px;
@@ -546,6 +580,7 @@ footer{
     height: 440px;
     width: 310px;
     padding: 30px;
+    cursor: pointer;
 }
 
 .section-availableCourses-course-info-onHover-tag{
@@ -637,6 +672,7 @@ footer{
 .section-availableCourses-course-btn:hover{
     background-color: #ea5822;
     color:white;
+    cursor: pointer;
 }
 
 /* ---- Sekce Gallery ---- */
@@ -645,6 +681,10 @@ footer{
 .section-gallery{
     grid-row: 5;
     grid-column: 2;
+}
+
+.section-gallery a {
+    text-decoration: none;
 }
 
 .section-gallery-grid{
@@ -716,6 +756,7 @@ footer{
     font-family: "Roboto";
     display: flex;
     height: 100%;
+    cursor: pointer;
 }
 
 .section-gallery-photo-onHover-btn{
@@ -858,10 +899,12 @@ footer{
 
 .section-team-member-socialsDropdownBtn:hover ~ .section-team-member-socialsDropdownMenu{
     display: flex;
+    
 }
 
 .section-team-member-socialsDropdownMenu:hover{
     display: flex;
+    cursor: pointer;
 }
 
 /* ---- Sekce Event ----*/
@@ -1200,6 +1243,10 @@ margin-left: auto;
     margin-top:-135px;
     margin-left: 5px;
 
+}
+
+.section-testimonials-slide{
+    display: none;
 }
 
 
@@ -1587,8 +1634,6 @@ footer{
     margin-bottom: 60px;
 }
 
-
-
 /* ---- Upravy pri zmene velikosti okna */
 
 @media only screen and (max-width: 992px)  {
@@ -1622,10 +1667,5 @@ footer{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-    }
-
-    *{
-        font-size: 96%;
-    }
-  
+    } 
 }

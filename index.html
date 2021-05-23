@@ -4,12 +4,13 @@
     <meta charset="utf-8" />
     <title>App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script charset="utf-8" src="js/app.js"></script>
     <link rel="stylesheet" href="css/css.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://kit.fontawesome.com/d6d235ec86.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
 </head>
 <body>
     <nav class="navbar">
@@ -18,12 +19,37 @@
             <div class="navbar-signIn align-center"><i class="fas fa-user-circle" style="color:#ea5822;margin-right:4px"></i>SIGN IN</div>
         </div>
         <ul class="navbar-middle">
-            <li>Home<i class="fas fa-angle-down"></i></li>
-            <li>Courses<i class="fas fa-angle-down"></i></li>
-            <li>Events<i class="fas fa-angle-down"></i></li>
-            <li>Pages<i class="fas fa-angle-down"></i></li>
-            <li>Blog<i class="fas fa-angle-down"></i></li>
-            <li>Contact<i class="fas fa-angle-down"></i></li>
+            <li>
+                Home<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <li>About Us</li>
+                    <li>Faq</li>
+                    <li>Instructor Details</li>
+    
+                </ul>
+            </li>
+            <li>
+                Courses<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <li>Our Courses</li>
+                    <li>Course Details</li>
+                </ul>
+            </li>
+            <li>
+                Events<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <li>Event Details</li>
+                </ul>
+            </li>
+            <li>Pages</li>
+            <li>
+                Blog<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <li>Blog Grid</li>
+                    <li>Blog Details</li>
+                </ul>
+            </li>
+            <li>Contact Us</li>
         </ul>
         
         <ul class="navbar-right">
@@ -399,54 +425,66 @@
         </div>
         <hr class="section-gallery-menu-line">
         <div class="section-gallery-grid">
-            <div class="section-gallery-photo">         
-                <div class="section-gallery-photo-onHover">
-                    Group Study
-                    <div class="section-gallery-photo-onHover-btn align-center">
-                        <i class="fas fa-arrow-right"></i>
+            
+                <div class="section-gallery-photo">        
+                    <div class="section-gallery-photo-onHover">
+                        Group Study
+                        <div class="section-gallery-photo-onHover-btn align-center">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="section-gallery-photo">         
-                <div class="section-gallery-photo-onHover">
-                    Group Study
-                    <div class="section-gallery-photo-onHover-btn align-center">
-                        <i class="fas fa-arrow-right"></i>
+            
+            
+                <div class="section-gallery-photo">         
+                    <div class="section-gallery-photo-onHover">
+                        Group Study
+                        <div class="section-gallery-photo-onHover-btn align-center">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="section-gallery-photo">         
-                <div class="section-gallery-photo-onHover">
-                    Group Study
-                    <div class="section-gallery-photo-onHover-btn align-center">
-                        <i class="fas fa-arrow-right"></i>
+           
+            
+                <div class="section-gallery-photo">         
+                    <div class="section-gallery-photo-onHover">
+                        Group Study
+                        <div class="section-gallery-photo-onHover-btn align-center">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="section-gallery-photo">         
-                <div class="section-gallery-photo-onHover">
-                    Group Study
-                    <div class="section-gallery-photo-onHover-btn align-center">
-                        <i class="fas fa-arrow-right"></i>
+           
+            
+                <div class="section-gallery-photo">         
+                    <div class="section-gallery-photo-onHover">
+                        Group Study
+                        <div class="section-gallery-photo-onHover-btn align-center">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="section-gallery-photo">         
-                <div class="section-gallery-photo-onHover">
-                    Group Study
-                    <div class="section-gallery-photo-onHover-btn align-center">
-                        <i class="fas fa-arrow-right"></i>
+           
+            
+                <div class="section-gallery-photo">         
+                    <div class="section-gallery-photo-onHover">
+                        Group Study
+                        <div class="section-gallery-photo-onHover-btn align-center">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="section-gallery-photo">         
-                <div class="section-gallery-photo-onHover">
-                    Group Study
-                    <div class="section-gallery-photo-onHover-btn align-center">
-                        <i class="fas fa-arrow-right"></i>
+            
+            
+                <div class="section-gallery-photo">         
+                    <div class="section-gallery-photo-onHover">
+                        Group Study
+                        <div class="section-gallery-photo-onHover-btn align-center">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
+            
         </div>
     </section>
     <div class="section-team-background"></div>
@@ -651,27 +689,61 @@
             <div class="section-testimonials-say-border">        
            
                 <div class="section-testimonials-say">
-                    <div class="section-testimonials-say-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae autem, sint, pariatur eius, 
-                        quaerat numquam perspiciatis illo harum voluptate amet dolores ducimus vel et? Optio.
+                    <div class="section-testimonials-slide">
+                        <div class="section-testimonials-say-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae autem, sint, pariatur eius, 
+                            quaerat numquam perspiciatis illo harum voluptate amet dolores ducimus vel et? Optio.
+                        </div>
+                        <div class="section-testimonials-say-subText">
+                            Rnimad minima veniam quis nostreercit ationem ullam corporis su.
+                            Rnimad minima veniam quis nostreercit ationem ullam corporis su
+                        </div>
+                        <div class="section-testimonials-say-avatar">
+                            <div class="section-testimonials-say-avatar-img"></div>
+                            <div class="section-testimonials-say-avatar-name">Sousa Fernandes</div>
+                            <div class="section-testimonials-say-avatar-role">CEO & Founder</div>
+                        </div>
                     </div>
-                    <div class="section-testimonials-say-subText">
-                        Rnimad minima veniam quis nostreercit ationem ullam corporis su.
-                        Rnimad minima veniam quis nostreercit ationem ullam corporis su
+                    <div class="section-testimonials-slide">
+                        <div class="section-testimonials-say-text">
+                            Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Duis sapien nunc, commodo et, interdum suscipi.
+                        </div>
+                        <div class="section-testimonials-say-subText">
+                            Rnimad minima veniam quis nostreercit ationem ullam corporis su.
+                            Rnimad minima veniam quis nostreercit ationem ullam corporis su
+                        </div>
+                        <div class="section-testimonials-say-avatar">
+                            <div class="section-testimonials-say-avatar-img"></div>
+                            <div class="section-testimonials-say-avatar-name">Pablo Picaso</div>
+                            <div class="section-testimonials-say-avatar-role">Artist</div>
+                        </div>
                     </div>
-                    <div class="section-testimonials-say-avatar">
-                        <div class="section-testimonials-say-avatar-img"></div>
-                        <div class="section-testimonials-say-avatar-name">Sousa Fernandes</div>
-                        <div class="section-testimonials-say-avatar-role">CEO & Founder</div>
+                    <div class="section-testimonials-slide">
+                        <div class="section-testimonials-say-text">
+                            Fusce suscipit libero eget elit. Fusce aliquam vestibulum ipsum. Pellentesque sapien. Praesent id justo in neque elementum ultrices. Sed ac dolor sit amet purus malesuada congue.
+                        </div>
+                        <div class="section-testimonials-say-subText">
+                            Rnimad minima veniam quis nostreercit ationem ullam corporis su.
+                            Rnimad minima veniam quis nostreercit ationem ullam corporis su
+                        </div>
+                        <div class="section-testimonials-say-avatar">
+                            <div class="section-testimonials-say-avatar-img"></div>
+                            <div class="section-testimonials-say-avatar-name">Garry Kasparov</div>
+                            <div class="section-testimonials-say-avatar-role">Grandmaster</div>
+                        </div>
                     </div>
                     <div class="section-testimonials-say-navigation">
-                        <div class="section-testimonials-say-navigation-btn align-center">
-                            <i class="fas fa-arrow-left"></i>
-                        </div>
+                        <a onclick="plusSlides(-1)">
+                            <div class="section-testimonials-say-navigation-btn align-center">
+                                <i class="fas fa-arrow-left"></i>
+                            </div>
+                        </a>
                         &emsp;
-                        <div class="section-testimonials-say-navigation-btn align-center">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
+                        <a onclick="plusSlides(1)">
+                            <div class="section-testimonials-say-navigation-btn align-center">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
                         <i class="fas fa-quote-left fa-5x"></i>
                     </div>
                 </div>
@@ -843,10 +915,36 @@
         <div class="footer-copyright align-center">
             Copyright © 2020 EduPlus All Rights Reserved
         </div>
-    </footer>
-
+    </footer>   
     
 </main>
+
+<script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("section-testimonials-slide");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+} 
+</script>
+
 
 </body>
 </html>
