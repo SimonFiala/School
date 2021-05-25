@@ -1,0 +1,573 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="stylesheet" href="css/css.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src="https://kit.fontawesome.com/d6d235ec86.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+    
+
+
+        <style>
+            .section-facts{
+                grid-row: 3;
+            }
+            .section-facts-fact{
+                border-top:2px solid #ea5822;
+            }
+
+            .section-team{
+                grid-row:5;
+            }
+            .section-team-member-info{
+                border: 1px solid #e2e2e2;
+            }
+
+            .section-testimonials, .section-testimonials-background{
+                grid-row:6;
+            }
+
+            .section-blog{
+                grid-row:7;
+            }
+        </style>
+
+    </head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="index.html"><img src="images/EduPlus.jpg" alt="logo"></a>
+            <div class="navbar-hamburger-btn align-center" ><i class="fa fa-bars" onclick="showMenu()"></i></div>
+            <div class="navbar-signIn align-center"><i class="fas fa-user-circle" style="color:#ea5822;margin-right:4px"></i>SIGN IN</div>
+        </div>
+        <ul class="navbar-middle" id="hamburger">
+            <li onclick="showSubMenu(0)">
+                Home<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="faq.html">Faq</a></li>
+                    <li><a href="instructor-details.html">Instructor Details</a></li>
+    
+                </ul>
+            </li>
+            <li onclick="showSubMenu(1)">
+                Courses<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <li><a href="our-courses.html">Our Courses</a></li>
+                    <li><a href="course-details.html">Course Details</a></li>
+                </ul>
+            </li>
+            <li onclick="showSubMenu(2)">
+                Events<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <li><a href="event-details.html">Event Details</a></li>
+                </ul>
+            </li>
+            <li>Pages</li>
+            <li onclick="showSubMenu(3)">
+                Blog<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <li><a href="blog-grid.html">Blog Grid</a></li>
+                    <li><a href="blog-details.html">Blog Details</a></li>
+                </ul>
+            </li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+        
+        <ul class="navbar-right">
+            <li class="align-center"><i class="fab fa-facebook-f"></i></li>
+            <li class="align-center"><i class="fab fa-youtube"></i></li>
+            <li class="align-center"><i class="fas fa-user-circle" style="color:#ea5822;margin-right:4px"></i>SIGN IN</li>
+            <li><img src="images/Bar.png" alt="bar"></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="section-photo align-center">
+            <img src="images/about-us/about-us.jpg" style="width: 100%;"> 
+            <div class="section-photo-wrapper align-center" style="flex-direction: column;">
+                <h3 class="section-photo-text">About Us</h3>    
+                <div class="section-photo-path">Home&emsp;>&emsp;About Us</div>  
+            </div>     
+        </Section>
+        <section class="section-welcome">
+            <div class="section-welcome-images">
+                <img src="images/about-us/welcome/1.jpg"><img src="images/about-us/welcome/2.jpg" class="section-welcome-img2">
+                <div class="section-welcom-tag">
+                    <div class="section-welcome-tag-border">
+                        <div class="section-welcome-tag-content align-center" style="flex-direction: column;">
+                            <span style="font-size:50px">25</span>YEARS OF<br>EXPERIENCE
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-welcome-info">
+                <div class="section-becomeInstructor-info-tag"><img src="images/ellipsis.png" class="ellipsis" alt="ellipsis">&nbsp;Introduced About EduPlus</div> 
+                <h3 class="section-becomeInstructor-info-tag">Welcome To Edu<span style="font-weight: 400;">Plus</span></h3>
+                <div class="section-welcome-info-text">
+                    <div class="section-welcome-info-line"></div>
+                    <div>Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Integer tempor. In dapibus augue non sapien. Lorem ipsum dolor sit amet.</div>
+                </div>
+                <div class="section-welcome-info-offer align-center">
+                    <div class="section-welcome-info-offer-icon align-center">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div>
+                        <div class="section-welcome-info-offer-name">Professional & Expert</div>
+                        <div class="section-welcome-info-offer-description">Quis autem vel eum iure reprehenderit qui in ea voluptate velit laboris nisi ut aliquip ex ea commodo consequat. </div>
+                    </div>
+                </div>
+                <hr style="background-color: #e4e4e4;">
+                <div class="section-welcome-info-offer align-center">
+                    <div class="section-welcome-info-offer-icon align-center">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div>
+                        <div class="section-welcome-info-offer-name">Job Placement Support</div>
+                        <div class="section-welcome-info-offer-description">Quis autem vel eum iure reprehenderit qui in ea voluptate velit laboris nisi ut aliquip ex ea commodo consequat. </div>
+                    </div>
+                </div>
+                <div class="section-welcome-info-btn align-center">
+                    LEARN MORE&emsp;
+                    <img src="images/long-arrow-right.png" class="long-arrow-right" alt="arrow-right">
+                </div>
+            </div>
+        </section>     
+        <div class="section-video-background"></div>
+        <section class="section-facts">
+            <div class="section-facts-fact align-center">
+                <i class="fas fa-users section-facts-icon"></i> 
+                <div class="section-facts-fact-info">
+                    <span class="section-facts-fact-number">3045+</span><br>
+                    <span class="section-facts-fact-text">Saticified Students</span>
+                </div>
+            </div>
+            <div class="section-facts-fact align-center">
+                <i class="fas fa-book-open section-facts-icon"></i> 
+                <div class="section-facts-fact-info">
+                    <span class="section-facts-fact-number">7825+</span><br>
+                    <span class="section-facts-fact-text">Available Courses</span>
+                </div>
+            </div>
+            <div class="section-facts-fact align-center">
+                <i class="fas  fa-graduation-cap section-facts-icon"></i> 
+                <div class="section-facts-fact-info">
+                    <span class="section-facts-fact-number">9862+</span><br>
+                    <span class="section-facts-fact-text">Graduate Students</span>
+                </div>
+            </div>
+            <div class="section-facts-fact align-center">
+                <i class="fas fa-laptop-code section-facts-icon"></i> 
+                <div class="section-facts-fact-info">
+                    <span class="section-facts-fact-number">8963+</span><br>
+                    <span class="section-facts-fact-text">Active Courses</span>
+                </div>
+            </div>
+        </section>
+        <section class="section-video align-center">
+            <div>
+                <div class="section-becomeInstructor-info-tag"><img src="images/ellipsis.png" class="ellipsis" alt="ellipsis">&nbsp;Who We Are</div> 
+                <h3 class="section-becomeInstructor-info-tag">Institute Goals</h3>
+                <div class="section-welcome-info-offer-description">
+                    Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Nemo enim ipsam voluptatem. 
+                </div>
+                <div class="section-video-stats">
+                    <div class="section-video-stats-stat">
+                        <div class="section-video-stats-circle align-center">
+                            <div class="section-video-stats-circle-text">
+                                <span style="font-size: 30px;letter-spacing: -1px;">83</span>
+                                %
+                            </div>
+                        </div>
+                        <div style="font-size: 18px; letter-spacing: -1px;">Enginering  Studies</div>
+                    </div>    
+                    <div class="section-video-stats-stat">
+                        <div class="section-video-stats-circle align-center" style="border-color:#3662ff;border-top:7px solid transparent">
+                            <div class="section-video-stats-circle-text">
+                                <span style="font-size: 30px;letter-spacing: -1px;">79</span>
+                                %
+                            </div>
+                        </div>
+                        <div style="font-size: 18px; letter-spacing: -1px;">General & Other Studies</div>
+                    </div>         
+                </div>
+            </div>
+            <img src="images/about-us/video.png" class="section-video-vid">
+        </section>
+        <section class="section-team">
+            <div class="section-tag"><img src="images/ellipsis.png" alt="ellipsis"> Team Members <img src="images/ellipsis.png" alt="ellipsis"></div>
+            <h3 class="section-tag2">Expert Instructors</h3>
+            <div class="section-team-grid">
+                <div class="section-team-member">
+                    <div class="section-team-member-img">
+                        <img src="images/instructors/1.jpg" alt="1">
+                        <div class="section-team-member-socialsDropdown">
+                            
+                            <div class="section-team-member-socialsDropdownBtn align-center">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="section-team-member-socialsDropdownMenu align-center">
+                                <div class="section-team-member-socialsDropdownMenu-twitter align-center">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                                <div class="section-team-member-socialsDropdownMenu-youtube align-center">
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+                                <div class="section-team-member-socialsDropdownMenu-facebook align-center">
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-team-member-info">
+                        <p class="section-team-member-info-name">Somalia D Silva</p>
+                        <p class="section-team-member-info-course">Math Teacher</p>
+                        <hr class="section-team-member-info-line">
+                        <div class="section-team-member-info-stats">
+                            <i class="fas fa-book"></i> 750+ Courses<br>
+                            </div>
+                    </div>
+                </div>
+                <div class="section-team-member">
+                    <div class="section-team-member-img">
+                        <img src="images/instructors/2.jpg" alt="2">
+                        <div class="section-team-member-socialsDropdown">
+                            
+                            <div class="section-team-member-socialsDropdownBtn align-center">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="section-team-member-socialsDropdownMenu align-center">
+                                <div class="section-team-member-socialsDropdownMenu-twitter align-center">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                                <div class="section-team-member-socialsDropdownMenu-youtube align-center">
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+                                <div class="section-team-member-socialsDropdownMenu-facebook align-center">
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-team-member-info">
+                        <p class="section-team-member-info-name">David D Warner</p>
+                        <p class="section-team-member-info-course">English Teacher</p>
+                        <hr class="section-team-member-info-line">
+                        <div class="section-team-member-info-stats">
+                            <i class="fas fa-book"></i> 3850+ Courses<br>
+                            </div>
+                    </div>
+                </div>
+                <div class="section-team-member">
+                    <div class="section-team-member-img">
+                        <img src="images/instructors/3.jpg" alt="3">
+                        <div class="section-team-member-socialsDropdown">
+                            
+                            <div class="section-team-member-socialsDropdownBtn align-center">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="section-team-member-socialsDropdownMenu align-center">
+                                <div class="section-team-member-socialsDropdownMenu-twitter align-center">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                                <div class="section-team-member-socialsDropdownMenu-youtube align-center">
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+                                <div class="section-team-member-socialsDropdownMenu-facebook align-center">
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-team-member-info">
+                        <p class="section-team-member-info-name">Xavi Toni Crusse</p>
+                        <p class="section-team-member-info-course">Computer Teacher</p>
+                        <hr class="section-team-member-info-line">
+                        <div class="section-team-member-info-stats">
+                            <i class="fas fa-book"></i> 632+ Courses<br>
+                            </div>
+                    </div>
+                </div>
+                <div class="section-team-member">
+                    <div class="section-team-member-img">
+                        <img src="images/instructors/4.jpg" alt="4">
+                        <div class="section-team-member-socialsDropdown">
+                            
+                            <div class="section-team-member-socialsDropdownBtn align-center">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="section-team-member-socialsDropdownMenu align-center">
+                                <div class="section-team-member-socialsDropdownMenu-twitter align-center">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                                <div class="section-team-member-socialsDropdownMenu-youtube align-center">
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+                                <div class="section-team-member-socialsDropdownMenu-facebook align-center">
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-team-member-info">
+                        <p class="section-team-member-info-name">Shaine Watson</p>
+                        <p class="section-team-member-info-course">Web Designer</p>
+                        <hr class="section-team-member-info-line">
+                        <div class="section-team-member-info-stats">
+                            <i class="fas fa-book"></i> 985+ Courses<br>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section-testimonials-background"></div>
+        <section class="section-testimonials">
+            <div class="section-tag"><img src="images/white_ellipsis.png" alt="ellipsis"> Students Feedback <img src="images/white_ellipsis.png" alt="ellipsis"></div>
+            <h3 class="section-tag2">What Our Students Say</h3>
+            <div class="section-testimonials-grid">
+                <div class="section-testimonials-say-border">        
+            
+                    <div class="section-testimonials-say">
+                        <div class="section-testimonials-slide">
+                            <div class="section-testimonials-say-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae autem, sint, pariatur eius, 
+                                quaerat numquam perspiciatis illo harum voluptate amet dolores ducimus vel et? Optio.
+                            </div>
+                            <div class="section-testimonials-say-subText">
+                                Rnimad minima veniam quis nostreercit ationem ullam corporis su.
+                                Rnimad minima veniam quis nostreercit ationem ullam corporis su
+                            </div>
+                            <div class="section-testimonials-say-avatar">
+                                <div class="section-testimonials-say-avatar-img">
+                                    <img src="images/avatar.png" alt="avatar">
+                                </div>
+                                <div class="section-testimonials-say-avatar-name">Sousa Fernandes</div>
+                                <div class="section-testimonials-say-avatar-role">CEO & Founder</div>
+                            </div>
+                        </div>
+                        <div class="section-testimonials-slide">
+                            <div class="section-testimonials-say-text">
+                                Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Duis sapien nunc, commodo et, interdum suscipi.
+                            </div>
+                            <div class="section-testimonials-say-subText">
+                                Rnimad minima veniam quis nostreercit ationem ullam corporis su.
+                                Rnimad minima veniam quis nostreercit ationem ullam corporis su
+                            </div>
+                            <div class="section-testimonials-say-avatar">
+                                <div class="section-testimonials-say-avatar-img">
+                                    <img src="images/avatar.png" alt="avatar">
+                                </div>
+                                <div class="section-testimonials-say-avatar-name">Pablo Picaso</div>
+                                <div class="section-testimonials-say-avatar-role">Artist</div>
+                            </div>
+                        </div>
+                        <div class="section-testimonials-slide">
+                            <div class="section-testimonials-say-text">
+                                Fusce suscipit libero eget elit. Fusce aliquam vestibulum ipsum. Pellentesque sapien. Praesent id justo in neque elementum ultrices. Sed ac dolor sit amet purus malesuada congue.
+                            </div>
+                            <div class="section-testimonials-say-subText">
+                                Rnimad minima veniam quis nostreercit ationem ullam corporis su.
+                                Rnimad minima veniam quis nostreercit ationem ullam corporis su
+                            </div>
+                            <div class="section-testimonials-say-avatar">
+                                <div class="section-testimonials-say-avatar-img">
+                                    <img src="images/avatar.png" alt="avatar">
+                                </div>
+                                <div class="section-testimonials-say-avatar-name">Garry Kasparov</div>
+                                <div class="section-testimonials-say-avatar-role">Grandmaster</div>
+                            </div>
+                        </div>
+                        <div class="section-testimonials-say-navigation">
+                            <a onclick="plusSlides(-1)">
+                                <div class="section-testimonials-say-navigation-btn align-center">
+                                    <i class="fas fa-arrow-left"></i>
+                                </div>
+                            </a>
+                            &emsp;
+                            <a onclick="plusSlides(1)">
+                                <div class="section-testimonials-say-navigation-btn align-center">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </a>
+                            <i class="fas fa-quote-left fa-5x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-testimonials-imgs">
+                    <div class="section-testimonials-imgs-col">
+                        <div class="section-testimonials-imgs-img-border"></div>
+                        <div class="section-testimonials-imgs-img">
+                            <img src="images/testimonials/1.jpg" alt="1">
+                        </div>
+                        <div class="section-testimonials-imgs-img">
+                            <img src="images/testimonials/2.jpg" alt="2">
+                        </div>
+                        <div class="section-testimonials-imgs-img-border2"></div>
+                    </div>
+                    <div class="section-testimonials-imgs-col">
+                        <div class="section-testimonials-imgs-img">
+                            <img src="images/testimonials/3.jpg" alt="3">
+                        </div>
+                        <div class="section-testimonials-imgs-img">
+                            <img src="images/testimonials/4.jpg" alt="4">
+                        </div>
+                        <div class="section-testimonials-imgs-img">
+                            <img src="images/testimonials/5.jpg" alt="5">
+                        </div>
+                    </div>
+                    <div class="section-testimonials-imgs-col">
+                        <div class="section-testimonials-imgs-img">
+                            <img src="images/testimonials/6.jpg" alt="6">
+                        </div>
+                        <div class="section-testimonials-imgs-img">
+                            <img src="images/testimonials/7.jpg" alt="7">
+                        </div>
+                        <div class="section-testimonials-imgs-img">
+                            <img src="images/testimonials/8.jpg" alt="8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-blog">
+            <div class="section-tag"><img src="images/ellipsis.png" alt="ellipsis"> Articles & Tips <img src="images/ellipsis.png" alt="ellipsis"></div>
+            <h3 class="section-tag2">Latest News & Blog</h3>
+            <div class="section-blog-grid">
+                <div class="section-blog-news">
+                    <div class="section-blog-news-img">
+                        <img src="images/blog/1.png" alt="1">
+                    </div>
+                    <div class="section-blog-news-info">
+                        <div class="section-blog-news-info-info">
+                            <i class="far fa-calendar-alt"></i> &nbsp;25 NOV 2020 &emsp;
+                            <i class="far fa-comments"></i>&nbsp;COM(30)
+                        </div>
+                        <div class="section-blog-news-info-name">Learning Resources In Challenec Times Online Workshops</div>
+                        <div class="section-blog-news-info-avatar">
+                            <div class="section-blog-news-info-avatar-img">
+                                <img src="images/avatar2.png" alt="avatar2">
+                            </div>&emsp;
+                            <div class="section-blog-news-info-avatar-name">David Simala</div>
+                            <div class="section-blog-news-info-btn align-center">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>                
+                    </div>
+                </div>
+                <div class="section-blog-news">
+                    <div class="section-blog-news-img">
+                        <img src="images/blog/2.png" alt="2">
+                    </div>
+                    <div class="section-blog-news-info">
+                        <div class="section-blog-news-info-info">
+                            <i class="far fa-calendar-alt"></i> &nbsp;25 NOV 2020 &emsp;
+                            <i class="far fa-comments"></i>&nbsp;COM(30)
+                        </div>
+                        <div class="section-blog-news-info-name">Djang Highlights Models Admin And Harness Relational Database</div>
+                        <div class="section-blog-news-info-avatar">
+                            <div class="section-blog-news-info-avatar-img">
+                                <img src="images/avatar2.png" alt="avatar2">
+                            </div>&emsp;
+                            <div class="section-blog-news-info-avatar-name">David Simala</div>
+                            <div class="section-blog-news-info-btn align-center">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>                
+                    </div>
+                </div>
+                <div class="section-blog-news">
+                    <div class="section-blog-news-img">
+                        <img src="images/blog/3.png" alt="3">
+                    </div>
+                    <div class="section-blog-news-info">
+                        <div class="section-blog-news-info-info">
+                            <i class="far fa-calendar-alt"></i> &nbsp;25 NOV 2020 &emsp;
+                            <i class="far fa-comments"></i>&nbsp;COM(30)
+                        </div>
+                        <div class="section-blog-news-info-name">Smash Podcast Episode With Lura Kalbag What Is Online Privacy</div>
+                        <div class="section-blog-news-info-avatar">
+                            <div class="section-blog-news-info-avatar-img">
+                                <img src="images/avatar2.png" alt="avatar2">
+                            </div>&emsp;
+                            <div class="section-blog-news-info-avatar-name">David Simala</div>
+                            <div class="section-blog-news-info-btn align-center">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>                
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="section-brands-background"></div>
+        <section class="section-brands">
+            <img src="images/brand1.png" alt="sponsor">
+            <img src="images/brand2.png" alt="sponsor">
+            <img src="images/brand3.png" alt="sponsor">
+            <img src="images/brand4.png" alt="sponsor">
+            <img src="images/brand5.png" alt="sponsor">
+        </section>
+        
+        <div class="footer-background"></div>
+        <section class="section-footer">
+            <div class="footer-socials">
+                <img src="images/EduPlusFooter.png" alt="logo">
+                <div class="footer-socials-background align-center"><i class="fab fa-facebook-f"></i></div>Facebook
+                <div class="footer-socials-background align-center"><i class="fab fa-youtube"></i></div> Youtube
+                <div class="footer-socials-background align-center"><i class="fab fa-twitter"></i></div> Twitter
+                <div class="footer-socials-background align-center"><i class="fab fa-instagram"></i></div> Instagram
+            </div>
+            <hr class="footer-line">
+            <div class="footer-links">
+                <div class="footer-links-paragraph">
+                    <p class="footer-links-paragraph-name"> Our Courses</p>
+                    <i class="fas fa-circle" style="color:#ea5822"></i> Web Development<br>
+                        Bussiness Studies<br>
+                        Computer Engineering<br>
+                        English Learning<br>
+                        Graphics Design
+                </div>
+                <div class="footer-links-paragraph" style="margin-top:66px;">
+                        Color Combinations<br>
+                        Software Development<br>
+                        Photography<br>
+                        Advance WordPress<br>
+                        Basic PSD To HTML
+                </div>
+                <div class="footer-links-paragraph">
+                    <p class="footer-links-paragraph-name">Company</p>
+                    About Eduket<br>
+                    Meet Advisors<br>
+                    Join A Career<br>
+                    Latest Courses<br>
+                    Newsletters
+                </div>
+                <div class="footer-links-newsletters">
+                    <p class="footer-links-paragraph-name">Newsletters</p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore perferendis voluptate necessitatibus, iure consequatur impedit laudantium numquam.
+                    <div class="footer-links-enterMail">
+                        <input type="text" placeholder="Enter Your Email">
+                        <div class="footer-link-enterMail-btn  align-center">
+                            <img src="images/long-arrow-right.png" class="long-arrow-right" alt="right-arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright align-center">
+                Copyright © 2020 EduPlus All Rights Reserved
+            </div>
+        </section>
+    </footer> 
+
+
+    <script charset="utf-8" src="./js/js.js"></script>
+    <script charset="utf-8" src="./js/testimonials.js"></script>
+</body>
+</html>

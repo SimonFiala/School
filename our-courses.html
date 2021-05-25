@@ -1,0 +1,926 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="stylesheet" href="css/css.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src="https://kit.fontawesome.com/d6d235ec86.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+    
+
+
+        <style>
+            .section-team, .section-team-background{
+                grid-row:3;
+            }
+            .section-team-member-info{
+                border: 1px solid #e2e2e2;
+            }
+
+            .section-availableCourses{
+                grid-row: 2;
+            }
+
+            .section-availableCourses-course, .section-availableCourses-course-visible{
+                width: 270px;
+                height: 430px;
+            }
+
+            .section-availableCourses-course-info{
+                border: 1px solid #d7d7d7;
+            }
+
+            .section-availableCourses-course-onHover{
+                width: 210px;
+                height: 370px;
+                background-color: #3662ff;
+                color: #3662ff;
+            }
+
+            .section-availableCourses-course-onHover-text{
+                width: 220px;
+            }
+
+            .section-availableCourses-course-info-onHover-tag, .section-availableCourses-course-onHover-price, .section-availableCourses-course-onHover-btn {
+                color: #3662ff;
+            }
+            .section-availableCourses-grid{
+                grid-template-columns: repeat(auto-fill, 270px);
+            }
+            .section-availableCourses-course-image{
+                width: 270px;
+                height: auto;
+            }
+
+            .section-availableCourses-course-image img{
+                width:inherit;
+            }
+
+            .section-blog{
+                grid-row:4;
+            }
+        </style>
+
+    </head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="index.html"><img src="images/EduPlus.jpg" alt="logo"></a>
+            <div class="navbar-hamburger-btn align-center" ><i class="fa fa-bars" onclick="showMenu()"></i></div>
+            <div class="navbar-signIn align-center"><i class="fas fa-user-circle" style="color:#ea5822;margin-right:4px"></i>SIGN IN</div>
+        </div>
+        <ul class="navbar-middle" id="hamburger">
+            <li onclick="showSubMenu(0)">
+                Home<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="faq.html">Faq</a></li>
+                    <li><a href="instructor-details.html">Instructor Details</a></li>
+    
+                </ul>
+            </li>
+            <li onclick="showSubMenu(1)">
+                Courses<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <li><a href="our-courses.html">Our Courses</a></li>
+                    <li><a href="course-details.html">Course Details</a></li>
+                </ul>
+            </li>
+            <li onclick="showSubMenu(2)">
+                Events<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <li><a href="event-details.html">Event Details</a></li>
+                </ul>
+            </li>
+            <li>Pages</li>
+            <li onclick="showSubMenu(3)">
+                Blog<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <li><a href="blog-grid.html">Blog Grid</a></li>
+                    <li><a href="blog-details.html">Blog Details</a></li>
+                </ul>
+            </li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+        
+        <ul class="navbar-right">
+            <li class="align-center"><i class="fab fa-facebook-f"></i></li>
+            <li class="align-center"><i class="fab fa-youtube"></i></li>
+            <li class="align-center"><i class="fas fa-user-circle" style="color:#ea5822;margin-right:4px"></i>SIGN IN</li>
+            <li><img src="images/Bar.png" alt="bar"></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="section-photo align-center">
+            <img src="images/about-us/about-us.jpg" style="width: 100%;"> 
+            <div class="section-photo-wrapper align-center" style="flex-direction: column;">
+                <h3 class="section-photo-text">Our Courses</h3>    
+                <div class="section-photo-path">Courses&emsp;>&emsp;Our Courses</div>  
+            </div>     
+        </Section>
+        <section class="section-availableCourses">
+            <div class="section-availableCourses-menu align-center">
+                <button class="section-availableCourses-menu-btn">
+                Show All
+                </button>
+               <button class="section-availableCourses-menu-btn">
+                Design
+                </button>
+               <button class="section-availableCourses-menu-btn">
+                Computer
+                </button>
+               <button class="section-availableCourses-menu-btn">
+                Development 
+                </button>
+               <button class="section-availableCourses-menu-btn">
+                Medical
+                </button>
+               <button class="section-availableCourses-menu-btn">
+                    Photography    
+                </button>
+               <button class="section-availableCourses-menu-btn">
+                    Marketing
+                </button>
+                <button class="section-availableCourses-menu-btn">
+                    Driving
+                </button>
+                <button class="section-availableCourses-menu-btn">
+                    Buisness
+                </button>
+            </div>   
+            <div class="section-availableCourses-grid">
+                <div class="section-availableCourses-course">
+                    <div class="section-availableCourses-course-visible">
+                        <div class="section-availableCourses-course-image">
+                            <img src="images/available-courses/1.jpg" alt="1">
+                            <div class="section-availableCourses-course-image-avatar">
+                                <img src="images/avatar.png" alt="avatar">
+                            </div> 
+                            <div class="section-availableCourses-course-image-avatarName">Warner</div>
+                            <div class="section-availableCourses-course-image-price align-center">
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="section-availableCourses-course-info">
+                            <div class="align-left">
+                                <p class="section-availableCourses-course-info-tag align-center">
+                                    ENGLISH
+                                </p>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="section-availableCourses-course-info-name">
+                                Best Courses For Learning  English
+                            </p>
+                            <hr>
+                            <div class="section-availableCourses-course-info-bottom">                          
+                                <span><i class="fas fa-users"></i>25 </span> 
+                                <span><i class="far fa-clock"></i>36hr </span> 
+                                <span><i class="fas fa-comments"></i>2.5k</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="section-availableCourses-course-onHover">
+                        <div class="align-left">
+                            <p class="section-availableCourses-course-info-onHover-tag align-center">
+                                ENGLISH
+                            </p>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="section-availableCourses-course-info-onHover-name">
+                            Best Courses For Learning  English
+                        </p>
+                        <div class="align-left">
+                            <div class="section-availableCourses-course-image-avatar" style="margin-left:0px"> 
+                                <img src="images/avatar.png" alt="avatar">
+                            </div> 
+                            <div class="section-availableCourses-course-image-avatarName">Warner</div>
+                            <div class="section-availableCourses-course-onHover-price align-center">
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="section-availableCourses-course-onHover-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                        <div class="section-availableCourses-course-onHover-btn align-center">
+                            GET ENROLLED  
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="section-availableCourses-course-info-onHover-bottom">
+                            <span><i class="fas fa-users"></i>25 </span> 
+                            <span><i class="far fa-clock"></i>36hr </span> 
+                            <span><i class="fas fa-comments"></i>2.5k</span>
+                        </div>
+                    </div>       
+                </div>
+                <div class="section-availableCourses-course">
+                    <div class="section-availableCourses-course-visible">
+                        <div class="section-availableCourses-course-image">
+                            <img src="images/available-courses/2.jpg" alt="2">
+                            <div class="section-availableCourses-course-image-avatar">
+                                <img src="images/avatar.png" alt="avatar">
+                            </div> 
+                            <div class="section-availableCourses-course-image-avatarName">Warner</div>
+                            <div class="section-availableCourses-course-image-price align-center">
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="section-availableCourses-course-info">
+                            <div class="align-left">
+                                <p class="section-availableCourses-course-info-tag align-center">
+                                    ENGLISH
+                                </p>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="section-availableCourses-course-info-name">
+                                Learning About It Consulting Business Solutions
+                            </p>
+                            <hr>
+                            <div class="section-availableCourses-course-info-bottom">
+                                <span><i class="fas fa-users"></i>25 </span> 
+                                <span><i class="far fa-clock"></i>36hr </span> 
+                                <span><i class="fas fa-comments"></i>2.5k</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="section-availableCourses-course-onHover">
+                        <div class="align-left">
+                            <p class="section-availableCourses-course-info-onHover-tag align-center">
+                                ENGLISH
+                            </p>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="section-availableCourses-course-info-onHover-name">
+                            Learning About It Consulting Business Solutions
+                        </p>
+                        <div class="align-left">
+                            <div class="section-availableCourses-course-image-avatar" style="margin-left:0px">
+                                <img src="images/avatar.png" alt="avatar">
+                            </div> 
+                            <div class="section-availableCourses-course-image-avatarName">Warner</div>
+                            <div class="section-availableCourses-course-onHover-price align-center">
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="section-availableCourses-course-onHover-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                        <div class="section-availableCourses-course-onHover-btn align-center">
+                            GET ENROLLED  
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="section-availableCourses-course-info-onHover-bottom">
+                            <span><i class="fas fa-users"></i>25 </span> 
+                            <span><i class="far fa-clock"></i>36hr </span> 
+                            <span><i class="fas fa-comments"></i>2.5k</span>
+                        </div>
+                    </div>       
+                </div>
+                <div class="section-availableCourses-course">
+                    <div class="section-availableCourses-course-visible">
+                        <div class="section-availableCourses-course-image">
+                            <img src="images/available-courses/3.jpg" alt="3">
+                            <div class="section-availableCourses-course-image-avatar">
+                                <img src="images/avatar.png" alt="avatar">
+                            </div> 
+                            <div class="section-availableCourses-course-image-avatarName">Warner</div>
+                            <div class="section-availableCourses-course-image-price align-center">
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="section-availableCourses-course-info">
+                            <div class="align-left">
+                                <p class="section-availableCourses-course-info-tag align-center">
+                                    ENGLISH
+                                </p>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="section-availableCourses-course-info-name">
+                                About Basic Web Design For Beginners
+                            </p>
+                            <hr>
+                            <div class="section-availableCourses-course-info-bottom">
+                                <span><i class="fas fa-users"></i>25 </span> 
+                                <span><i class="far fa-clock"></i>36hr </span> 
+                                <span><i class="fas fa-comments"></i>2.5k</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="section-availableCourses-course-onHover">
+                        <div class="align-left">
+                            <p class="section-availableCourses-course-info-onHover-tag align-center">
+                                ENGLISH
+                            </p>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="section-availableCourses-course-info-onHover-name">
+                            About Basic Web Design For Beginners
+                        </p>
+                        <div class="align-left">
+                            <div class="section-availableCourses-course-image-avatar" style="margin-left:0px">
+                                <img src="images/avatar.png" alt="avatar">
+                            </div> 
+                            <div class="section-availableCourses-course-image-avatarName">Warner</div>
+                            <div class="section-availableCourses-course-onHover-price align-center">
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="section-availableCourses-course-onHover-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                        <div class="section-availableCourses-course-onHover-btn align-center">
+                            GET ENROLLED  
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="section-availableCourses-course-info-onHover-bottom">
+                            <span><i class="fas fa-users"></i>25 </span> 
+                            <span><i class="far fa-clock"></i>36hr </span> 
+                            <span><i class="fas fa-comments"></i>2.5k</span>
+                        </div>
+                    </div>       
+                </div>
+                <div class="section-availableCourses-course">
+                    <div class="section-availableCourses-course-visible">
+                        <div class="section-availableCourses-course-image">
+                            <img src="images/available-courses/3.jpg" alt="3">
+                            <div class="section-availableCourses-course-image-avatar">
+                                <img src="images/avatar.png" alt="avatar">
+                            </div> 
+                            <div class="section-availableCourses-course-image-avatarName">Warner</div>
+                            <div class="section-availableCourses-course-image-price align-center">
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="section-availableCourses-course-info">
+                            <div class="align-left">
+                                <p class="section-availableCourses-course-info-tag align-center">
+                                    ENGLISH
+                                </p>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="section-availableCourses-course-info-name">
+                                About Basic Web Design For Beginners
+                            </p>
+                            <hr>
+                            <div class="section-availableCourses-course-info-bottom">
+                                <span><i class="fas fa-users"></i>25 </span> 
+                                <span><i class="far fa-clock"></i>36hr </span> 
+                                <span><i class="fas fa-comments"></i>2.5k</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="section-availableCourses-course-onHover">
+                        <div class="align-left">
+                            <p class="section-availableCourses-course-info-onHover-tag align-center">
+                                ENGLISH
+                            </p>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="section-availableCourses-course-info-onHover-name">
+                            About Basic Web Design For Beginners
+                        </p>
+                        <div class="align-left">
+                            <div class="section-availableCourses-course-image-avatar" style="margin-left:0px">
+                                <img src="images/avatar.png" alt="avatar">
+                            </div> 
+                            <div class="section-availableCourses-course-image-avatarName">Warner</div>
+                            <div class="section-availableCourses-course-onHover-price align-center">
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="section-availableCourses-course-onHover-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                        <div class="section-availableCourses-course-onHover-btn align-center">
+                            GET ENROLLED  
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="section-availableCourses-course-info-onHover-bottom">
+                            <span><i class="fas fa-users"></i>25 </span> 
+                            <span><i class="far fa-clock"></i>36hr </span> 
+                            <span><i class="fas fa-comments"></i>2.5k</span>
+                        </div>
+                    </div>       
+                </div>
+                <div class="section-availableCourses-course">
+                    <div class="section-availableCourses-course-visible">
+                        <div class="section-availableCourses-course-image">
+                            <img src="images/available-courses/3.jpg" alt="3">
+                            <div class="section-availableCourses-course-image-avatar">
+                                <img src="images/avatar.png" alt="avatar">
+                            </div> 
+                            <div class="section-availableCourses-course-image-avatarName">Warner</div>
+                            <div class="section-availableCourses-course-image-price align-center">
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="section-availableCourses-course-info">
+                            <div class="align-left">
+                                <p class="section-availableCourses-course-info-tag align-center">
+                                    ENGLISH
+                                </p>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="section-availableCourses-course-info-name">
+                                About Basic Web Design For Beginners
+                            </p>
+                            <hr>
+                            <div class="section-availableCourses-course-info-bottom">
+                                <span><i class="fas fa-users"></i>25 </span> 
+                                <span><i class="far fa-clock"></i>36hr </span> 
+                                <span><i class="fas fa-comments"></i>2.5k</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="section-availableCourses-course-onHover">
+                        <div class="align-left">
+                            <p class="section-availableCourses-course-info-onHover-tag align-center">
+                                ENGLISH
+                            </p>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="section-availableCourses-course-info-onHover-name">
+                            About Basic Web Design For Beginners
+                        </p>
+                        <div class="align-left">
+                            <div class="section-availableCourses-course-image-avatar" style="margin-left:0px">
+                                <img src="images/avatar.png" alt="avatar">
+                            </div> 
+                            <div class="section-availableCourses-course-image-avatarName">Warner</div>
+                            <div class="section-availableCourses-course-onHover-price align-center">
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="section-availableCourses-course-onHover-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                        <div class="section-availableCourses-course-onHover-btn align-center">
+                            GET ENROLLED  
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="section-availableCourses-course-info-onHover-bottom">
+                            <span><i class="fas fa-users"></i>25 </span> 
+                            <span><i class="far fa-clock"></i>36hr </span> 
+                            <span><i class="fas fa-comments"></i>2.5k</span>
+                        </div>
+                    </div>       
+                </div>
+                <div class="section-availableCourses-course">
+                    <div class="section-availableCourses-course-visible">
+                        <div class="section-availableCourses-course-image">
+                            <img src="images/available-courses/3.jpg" alt="3">
+                            <div class="section-availableCourses-course-image-avatar">
+                                <img src="images/avatar.png" alt="avatar">
+                            </div> 
+                            <div class="section-availableCourses-course-image-avatarName">Warner</div>
+                            <div class="section-availableCourses-course-image-price align-center">
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="section-availableCourses-course-info">
+                            <div class="align-left">
+                                <p class="section-availableCourses-course-info-tag align-center">
+                                    ENGLISH
+                                </p>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="section-availableCourses-course-info-name">
+                                About Basic Web Design For Beginners
+                            </p>
+                            <hr>
+                            <div class="section-availableCourses-course-info-bottom">
+                                <span><i class="fas fa-users"></i>25 </span> 
+                                <span><i class="far fa-clock"></i>36hr </span> 
+                                <span><i class="fas fa-comments"></i>2.5k</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="section-availableCourses-course-onHover">
+                        <div class="align-left">
+                            <p class="section-availableCourses-course-info-onHover-tag align-center">
+                                ENGLISH
+                            </p>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="section-availableCourses-course-info-onHover-name">
+                            About Basic Web Design For Beginners
+                        </p>
+                        <div class="align-left">
+                            <div class="section-availableCourses-course-image-avatar" style="margin-left:0px">
+                                <img src="images/avatar.png" alt="avatar">
+                            </div> 
+                            <div class="section-availableCourses-course-image-avatarName">Warner</div>
+                            <div class="section-availableCourses-course-onHover-price align-center">
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="section-availableCourses-course-onHover-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                        <div class="section-availableCourses-course-onHover-btn align-center">
+                            GET ENROLLED  
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="section-availableCourses-course-info-onHover-bottom">
+                            <span><i class="fas fa-users"></i>25 </span> 
+                            <span><i class="far fa-clock"></i>36hr </span> 
+                            <span><i class="fas fa-comments"></i>2.5k</span>
+                        </div>
+                    </div>       
+                </div>
+                <div class="section-availableCourses-course">
+                    <div class="section-availableCourses-course-visible">
+                        <div class="section-availableCourses-course-image">
+                            <img src="images/available-courses/3.jpg" alt="3">
+                            <div class="section-availableCourses-course-image-avatar">
+                                <img src="images/avatar.png" alt="avatar">
+                            </div> 
+                            <div class="section-availableCourses-course-image-avatarName">Warner</div>
+                            <div class="section-availableCourses-course-image-price align-center">
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="section-availableCourses-course-info">
+                            <div class="align-left">
+                                <p class="section-availableCourses-course-info-tag align-center">
+                                    ENGLISH
+                                </p>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="section-availableCourses-course-info-name">
+                                About Basic Web Design For Beginners
+                            </p>
+                            <hr>
+                            <div class="section-availableCourses-course-info-bottom">
+                                <span><i class="fas fa-users"></i>25 </span> 
+                                <span><i class="far fa-clock"></i>36hr </span> 
+                                <span><i class="fas fa-comments"></i>2.5k</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="section-availableCourses-course-onHover">
+                        <div class="align-left">
+                            <p class="section-availableCourses-course-info-onHover-tag align-center">
+                                ENGLISH
+                            </p>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="section-availableCourses-course-info-onHover-name">
+                            About Basic Web Design For Beginners
+                        </p>
+                        <div class="align-left">
+                            <div class="section-availableCourses-course-image-avatar" style="margin-left:0px">
+                                <img src="images/avatar.png" alt="avatar">
+                            </div> 
+                            <div class="section-availableCourses-course-image-avatarName">Warner</div>
+                            <div class="section-availableCourses-course-onHover-price align-center">
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="section-availableCourses-course-onHover-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                        <div class="section-availableCourses-course-onHover-btn align-center">
+                            GET ENROLLED  
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="section-availableCourses-course-info-onHover-bottom">
+                            <span><i class="fas fa-users"></i>25 </span> 
+                            <span><i class="far fa-clock"></i>36hr </span> 
+                            <span><i class="fas fa-comments"></i>2.5k</span>
+                        </div>
+                    </div>       
+                </div>
+                <div class="section-availableCourses-course">
+                    <div class="section-availableCourses-course-visible">
+                        <div class="section-availableCourses-course-image">
+                            <img src="images/available-courses/3.jpg" alt="3">
+                            <div class="section-availableCourses-course-image-avatar">
+                                <img src="images/avatar.png" alt="avatar">
+                            </div> 
+                            <div class="section-availableCourses-course-image-avatarName">Warner</div>
+                            <div class="section-availableCourses-course-image-price align-center">
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="section-availableCourses-course-info">
+                            <div class="align-left">
+                                <p class="section-availableCourses-course-info-tag align-center">
+                                    ENGLISH
+                                </p>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="section-availableCourses-course-info-name">
+                                About Basic Web Design For Beginners
+                            </p>
+                            <hr>
+                            <div class="section-availableCourses-course-info-bottom">
+                                <span><i class="fas fa-users"></i>25 </span> 
+                                <span><i class="far fa-clock"></i>36hr </span> 
+                                <span><i class="fas fa-comments"></i>2.5k</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="section-availableCourses-course-onHover">
+                        <div class="align-left">
+                            <p class="section-availableCourses-course-info-onHover-tag align-center">
+                                ENGLISH
+                            </p>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="section-availableCourses-course-info-onHover-name">
+                            About Basic Web Design For Beginners
+                        </p>
+                        <div class="align-left">
+                            <div class="section-availableCourses-course-image-avatar" style="margin-left:0px">
+                                <img src="images/avatar.png" alt="avatar">
+                            </div> 
+                            <div class="section-availableCourses-course-image-avatarName">Warner</div>
+                            <div class="section-availableCourses-course-onHover-price align-center">
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="section-availableCourses-course-onHover-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                        <div class="section-availableCourses-course-onHover-btn align-center">
+                            GET ENROLLED  
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="section-availableCourses-course-info-onHover-bottom">
+                            <span><i class="fas fa-users"></i>25 </span> 
+                            <span><i class="far fa-clock"></i>36hr </span> 
+                            <span><i class="fas fa-comments"></i>2.5k</span>
+                        </div>
+                    </div>       
+                </div>
+
+            </div>
+        </section>   
+        <div class="section-team-background"></div>
+        <section class="section-team">
+            <div class="section-tag"><img src="images/ellipsis.png" alt="ellipsis"> Team Members <img src="images/ellipsis.png" alt="ellipsis"></div>
+            <h3 class="section-tag2">Expert Instructors</h3>
+            <div class="section-team-grid">
+                <div class="section-team-member">
+                    <div class="section-team-member-img">
+                        <img src="images/instructors/1.jpg" alt="1">
+                        <div class="section-team-member-socialsDropdown">
+                            
+                            <div class="section-team-member-socialsDropdownBtn align-center">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="section-team-member-socialsDropdownMenu align-center">
+                                <div class="section-team-member-socialsDropdownMenu-twitter align-center">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                                <div class="section-team-member-socialsDropdownMenu-youtube align-center">
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+                                <div class="section-team-member-socialsDropdownMenu-facebook align-center">
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-team-member-info">
+                        <p class="section-team-member-info-name">Somalia D Silva</p>
+                        <p class="section-team-member-info-course">Math Teacher</p>
+                        <hr class="section-team-member-info-line">
+                        <div class="section-team-member-info-stats">
+                            <i class="fas fa-book"></i> 750+ Courses<br>
+                            </div>
+                    </div>
+                </div>
+                <div class="section-team-member">
+                    <div class="section-team-member-img">
+                        <img src="images/instructors/2.jpg" alt="2">
+                        <div class="section-team-member-socialsDropdown">
+                            
+                            <div class="section-team-member-socialsDropdownBtn align-center">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="section-team-member-socialsDropdownMenu align-center">
+                                <div class="section-team-member-socialsDropdownMenu-twitter align-center">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                                <div class="section-team-member-socialsDropdownMenu-youtube align-center">
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+                                <div class="section-team-member-socialsDropdownMenu-facebook align-center">
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-team-member-info">
+                        <p class="section-team-member-info-name">David D Warner</p>
+                        <p class="section-team-member-info-course">English Teacher</p>
+                        <hr class="section-team-member-info-line">
+                        <div class="section-team-member-info-stats">
+                            <i class="fas fa-book"></i> 3850+ Courses<br>
+                            </div>
+                    </div>
+                </div>
+                <div class="section-team-member">
+                    <div class="section-team-member-img">
+                        <img src="images/instructors/3.jpg" alt="3">
+                        <div class="section-team-member-socialsDropdown">
+                            
+                            <div class="section-team-member-socialsDropdownBtn align-center">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="section-team-member-socialsDropdownMenu align-center">
+                                <div class="section-team-member-socialsDropdownMenu-twitter align-center">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                                <div class="section-team-member-socialsDropdownMenu-youtube align-center">
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+                                <div class="section-team-member-socialsDropdownMenu-facebook align-center">
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-team-member-info">
+                        <p class="section-team-member-info-name">Xavi Toni Crusse</p>
+                        <p class="section-team-member-info-course">Computer Teacher</p>
+                        <hr class="section-team-member-info-line">
+                        <div class="section-team-member-info-stats">
+                            <i class="fas fa-book"></i> 632+ Courses<br>
+                            </div>
+                    </div>
+                </div>
+                <div class="section-team-member">
+                    <div class="section-team-member-img">
+                        <img src="images/instructors/4.jpg" alt="4">
+                        <div class="section-team-member-socialsDropdown">
+                            
+                            <div class="section-team-member-socialsDropdownBtn align-center">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="section-team-member-socialsDropdownMenu align-center">
+                                <div class="section-team-member-socialsDropdownMenu-twitter align-center">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                                <div class="section-team-member-socialsDropdownMenu-youtube align-center">
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+                                <div class="section-team-member-socialsDropdownMenu-facebook align-center">
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-team-member-info">
+                        <p class="section-team-member-info-name">Shaine Watson</p>
+                        <p class="section-team-member-info-course">Web Designer</p>
+                        <hr class="section-team-member-info-line">
+                        <div class="section-team-member-info-stats">
+                            <i class="fas fa-book"></i> 985+ Courses<br>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-blog">
+            <div class="section-tag"><img src="images/ellipsis.png" alt="ellipsis"> Articles & Tips <img src="images/ellipsis.png" alt="ellipsis"></div>
+            <h3 class="section-tag2">Latest News & Blog</h3>
+            <div class="section-blog-grid">
+                <div class="section-blog-news">
+                    <div class="section-blog-news-img">
+                        <img src="images/blog/1.png" alt="1">
+                    </div>
+                    <div class="section-blog-news-info">
+                        <div class="section-blog-news-info-info">
+                            <i class="far fa-calendar-alt"></i> &nbsp;25 NOV 2020 &emsp;
+                            <i class="far fa-comments"></i>&nbsp;COM(30)
+                        </div>
+                        <div class="section-blog-news-info-name">Learning Resources In Challenec Times Online Workshops</div>
+                        <div class="section-blog-news-info-avatar">
+                            <div class="section-blog-news-info-avatar-img">
+                                <img src="images/avatar2.png" alt="avatar2">
+                            </div>&emsp;
+                            <div class="section-blog-news-info-avatar-name">David Simala</div>
+                            <div class="section-blog-news-info-btn align-center">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>                
+                    </div>
+                </div>
+                <div class="section-blog-news">
+                    <div class="section-blog-news-img">
+                        <img src="images/blog/2.png" alt="2">
+                    </div>
+                    <div class="section-blog-news-info">
+                        <div class="section-blog-news-info-info">
+                            <i class="far fa-calendar-alt"></i> &nbsp;25 NOV 2020 &emsp;
+                            <i class="far fa-comments"></i>&nbsp;COM(30)
+                        </div>
+                        <div class="section-blog-news-info-name">Djang Highlights Models Admin And Harness Relational Database</div>
+                        <div class="section-blog-news-info-avatar">
+                            <div class="section-blog-news-info-avatar-img">
+                                <img src="images/avatar2.png" alt="avatar2">
+                            </div>&emsp;
+                            <div class="section-blog-news-info-avatar-name">David Simala</div>
+                            <div class="section-blog-news-info-btn align-center">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>                
+                    </div>
+                </div>
+                <div class="section-blog-news">
+                    <div class="section-blog-news-img">
+                        <img src="images/blog/3.png" alt="3">
+                    </div>
+                    <div class="section-blog-news-info">
+                        <div class="section-blog-news-info-info">
+                            <i class="far fa-calendar-alt"></i> &nbsp;25 NOV 2020 &emsp;
+                            <i class="far fa-comments"></i>&nbsp;COM(30)
+                        </div>
+                        <div class="section-blog-news-info-name">Smash Podcast Episode With Lura Kalbag What Is Online Privacy</div>
+                        <div class="section-blog-news-info-avatar">
+                            <div class="section-blog-news-info-avatar-img">
+                                <img src="images/avatar2.png" alt="avatar2">
+                            </div>&emsp;
+                            <div class="section-blog-news-info-avatar-name">David Simala</div>
+                            <div class="section-blog-news-info-btn align-center">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>                
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="section-brands-background"></div>
+        <section class="section-brands">
+            <img src="images/brand1.png" alt="sponsor">
+            <img src="images/brand2.png" alt="sponsor">
+            <img src="images/brand3.png" alt="sponsor">
+            <img src="images/brand4.png" alt="sponsor">
+            <img src="images/brand5.png" alt="sponsor">
+        </section>
+        
+        <div class="footer-background"></div>
+        <section class="section-footer">
+            <div class="footer-socials">
+                <img src="images/EduPlusFooter.png" alt="logo">
+                <div class="footer-socials-background align-center"><i class="fab fa-facebook-f"></i></div>Facebook
+                <div class="footer-socials-background align-center"><i class="fab fa-youtube"></i></div> Youtube
+                <div class="footer-socials-background align-center"><i class="fab fa-twitter"></i></div> Twitter
+                <div class="footer-socials-background align-center"><i class="fab fa-instagram"></i></div> Instagram
+            </div>
+            <hr class="footer-line">
+            <div class="footer-links">
+                <div class="footer-links-paragraph">
+                    <p class="footer-links-paragraph-name"> Our Courses</p>
+                    <i class="fas fa-circle" style="color:#ea5822"></i> Web Development<br>
+                        Bussiness Studies<br>
+                        Computer Engineering<br>
+                        English Learning<br>
+                        Graphics Design
+                </div>
+                <div class="footer-links-paragraph" style="margin-top:66px;">
+                        Color Combinations<br>
+                        Software Development<br>
+                        Photography<br>
+                        Advance WordPress<br>
+                        Basic PSD To HTML
+                </div>
+                <div class="footer-links-paragraph">
+                    <p class="footer-links-paragraph-name">Company</p>
+                    About Eduket<br>
+                    Meet Advisors<br>
+                    Join A Career<br>
+                    Latest Courses<br>
+                    Newsletters
+                </div>
+                <div class="footer-links-newsletters">
+                    <p class="footer-links-paragraph-name">Newsletters</p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore perferendis voluptate necessitatibus, iure consequatur impedit laudantium numquam.
+                    <div class="footer-links-enterMail">
+                        <input type="text" placeholder="Enter Your Email">
+                        <div class="footer-link-enterMail-btn  align-center">
+                            <img src="images/long-arrow-right.png" class="long-arrow-right" alt="right-arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright align-center">
+                Copyright © 2020 EduPlus All Rights Reserved
+            </div>
+        </section>
+    </footer> 
+
+
+    <script charset="utf-8" src="./js/js.js"></script>
+</body>
+</html>
