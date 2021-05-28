@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="stylesheet" href="css/css.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src="https://kit.fontawesome.com/d6d235ec86.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+    
+
+
+    </head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="index.html"><img src="images/EduPlus.jpg" alt="logo"></a>
+            <div class="navbar-hamburger-btn align-center" ><i class="fa fa-bars" onclick="showMenu()"></i></div>
+            <div class="navbar-signIn align-center"><i class="fas fa-user-circle" style="color:#ea5822;margin-right:4px"></i>SIGN IN</div>
+        </div>
+        <ul class="navbar-middle" id="hamburger">
+            <li onclick="showSubMenu(0)">
+                Home<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <a href="about-us.html">  <li>About Us</li></a>
+                    <a href="faq.html"><li>Faq</li></a>
+                    <a href="instructor-details.html"><li>Instructor Details</li></a>
+    
+                </ul>
+            </li>
+            <li onclick="showSubMenu(1)">
+                Courses<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <a href="our-courses.html"><li>Our Courses</li></a>
+                    <a href="course-details.html"><li>Course Details</li></a>
+                </ul>
+            </li>
+            <li onclick="showSubMenu(2)">
+                Events<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <a href="event-details.html"> <li>Event Details</li></a>
+                </ul>
+            </li>
+            <li>Pages</li>
+            <li onclick="showSubMenu(3)">
+                Blog<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                   <a href="blog-grid.html">  <li> Blog Grid  </li></a>
+                   <a href="blog-details.html"> <li>Blog Details</li></a>
+                </ul>
+            </li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+        
+        <ul class="navbar-right">
+            <li class="align-center"><i class="fab fa-facebook-f"></i></li>
+            <li class="align-center"><i class="fab fa-youtube"></i></li>
+            <li class="align-center"><i class="fas fa-user-circle" style="color:#ea5822;margin-right:4px"></i>SIGN IN</li>
+            <li><img src="images/Bar.png" alt="bar"></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="section-photo align-center">
+            <img src="images/about-us/about-us.jpg" style="width: 100%;" alt="hero-photo"> 
+            <div class="section-photo-wrapper align-center" style="flex-direction: column;">
+                <h3 class="section-photo-text">Course Details</h3>    
+                <div class="section-photo-path">Home&emsp;>&emsp;Course Details</div>  
+            </div>     
+        </Section>
+        <section class="section-main">
+            <div class="section-main-content">
+                <img src="images/course-details/1.png" alt="1" >
+                <div style="color:#ea5822;margin:20px 0;">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <div class="section-main-title">
+                    How To Improve Web Design Skills
+                </div>
+                <div class="section-main-text">
+                    Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                    Mauris tincidunt sem sed arcu. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Integer vulputate sem a nibh rutrum consequat. 
+                    Nulla pulvinar eleifend sem. Nullam at arcu a est sollicitudin euismod. 
+                    Praesent id justo in neque elementum ultrices. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Aliquam erat volutpat. 
+                </div>
+                <div class="section-main-title">
+                    Curriculum
+                </div>
+                <div class="section-main-text">
+                    Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                    Mauris tincidunt sem sed arcu. Sed vel lectus.  
+                </div>
+                <div class="section-main-lesson">
+                    <div class="section-main-lesson-name">Lesson 01 : Introduced About Web Design</div>
+                    <div class="section-main-lesson-details"><i class="far fa-play-circle"></i>&emsp;05:59 hr</div>
+                </div>
+                <div class="section-main-lesson">
+                    <div class="section-main-lesson-name">Lesson 02 : What Is UX/UI Design ?</div>
+                    <div class="section-main-lesson-details"><i class="far fa-play-circle"></i>&emsp;05:59 hr</div>
+                </div>
+                <div class="section-main-lesson">
+                    <div class="section-main-lesson-name">Lesson 03 : Why Need UX/UI Role In Web Design ?</div>
+                    <div class="section-main-lesson-details"><i class="far fa-play-circle"></i>&emsp;05:59 hr</div>
+                </div>
+                <div class="section-main-lesson">
+                    <div class="section-main-lesson-name">Lesson 04 : What Is UX Manager ?</div>
+                    <div class="section-main-lesson-details"><i class="far fa-play-circle"></i>&emsp;05:59 hr</div>
+                </div>
+                <div class="section-main-lesson">
+                    <div class="section-main-lesson-name">Lesson 05 : What’s Your Design Goals?</div>
+                    <div class="section-main-lesson-details"><i class="far fa-play-circle"></i>&emsp;05:59 hr</div>
+                </div>
+                <img src="images/course-details/2.png" style="margin:30px 0" alt="2">
+                <div class="section-main-title">
+                    Frequently Asked Questions
+                </div>
+                <div class="section-main-text">
+                    Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                </div>
+                <div class="section-main-faq-question" onclick="showAnswer(0)">
+                    <div class="section-main-lesson-name">Best Online Course For Basic Web Design  For Beginners</div>
+                    <div class="section-main-lesson-details"><i class="fas fa-angle-right"></i><i class="fas fa-angle-down"></i></div>
+                </div>
+                <div class="section-main-faq-answer">
+                    <img src="images/course-details/faq/1.png" alt="1">
+                    <div class="section-main-text">
+                        Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                    </div>
+                </div>
+                <div class="section-main-faq-question" onclick="showAnswer(1)">
+                    <div class="section-main-lesson-name">Why We Are The Best Online Courses ?</div>
+                    <div class="section-main-lesson-details"><i class="fas fa-angle-right"></i><i class="fas fa-angle-down"></i></div>
+                </div>
+                <div class="section-main-faq-answer">
+                    <img src="images/course-details/faq/1.png" alt="1">
+                    <div class="section-main-text">
+                        Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                    </div>
+                </div>
+                <div class="section-main-faq-question" onclick="showAnswer(2)">
+                    <div class="section-main-lesson-name">Creating Secure Password Flows With NodeJS And MySQL</div>
+                    <div class="section-main-lesson-details"><i class="fas fa-angle-right"></i><i class="fas fa-angle-down"></i></div>
+                </div>
+                <div class="section-main-faq-answer">
+                    <img src="images/course-details/faq/1.png" alt="1">
+                    <div class="section-main-text">
+                        Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                    </div>
+                </div>
+                <div class="section-main-faq-question" onclick="showAnswer(3)">
+                    <div class="section-main-lesson-name">Creating Secure Password Flows With NodeJS And MySQL</div>
+                    <div class="section-main-lesson-details"><i class="fas fa-angle-right"></i><i class="fas fa-angle-down"></i></div>
+                </div>
+                <div class="section-main-faq-answer">
+                    <img src="images/course-details/faq/1.png" alt="1">
+                    <div class="section-main-text">
+                        Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                    </div>
+                </div>
+                <div class="section-main-title" style="margin-top:20px">
+                    Course Instructors
+                </div>
+                <div class="section-main-instructors-grid">
+                    <div class="section-main-instructors-instructor">
+                        <img src="images/course-details/instructors/1.png" alt="1">
+                        <div class="section-main-instructors-instructor-name">
+                            Somalia D Silva
+                        </div>
+                        <div class="section-main-instructors-instructor-subject">
+                            Math Teacher
+                        </div>
+                    </div>
+                    <div class="section-main-instructors-instructor">
+                        <img src="images/course-details/instructors/2.png" alt="2">
+                        <div class="section-main-instructors-instructor-name">
+                            David Warner
+                        </div>
+                        <div class="section-main-instructors-instructor-subject">
+                            Math Teacher
+                        </div>
+                    </div>
+                    <div class="section-main-instructors-instructor">
+                        <img src="images/course-details/instructors/3.png" alt="3">
+                        <div class="section-main-instructors-instructor-name">
+                            Zavib Makaullah
+                        </div>
+                        <div class="section-main-instructors-instructor-subject">
+                            Math Teacher
+                        </div>
+                    </div>
+                    <div class="section-main-instructors-instructor">
+                        <img src="images/course-details/instructors/4.png" alt="4">
+                        <div class="section-main-instructors-instructor-name">
+                            Jhonson Maxwell
+                        </div>
+                        <div class="section-main-instructors-instructor-subject">
+                            Math Teacher
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-main-sidebar">
+                <div class="section-main-sidebar-info">
+                    <div class="section-main-sidebar-info-row">
+                        <div class="section-main-sidebar-info-name">
+                            <i class="fas fa-dollar-sign"></i>&nbsp;
+                            Course Price 
+                        </div>
+                        <div class="section-main-sidebar-info-value">
+                            $59 
+                        </div>
+                    </div>
+                    <div class="section-main-sidebar-info-row">
+                        <div class="section-main-sidebar-info-name">
+                            <i class="far fa-user-circle"></i>&nbsp;
+                            Instructor
+                        </div>
+                        <div class="section-main-sidebar-info-value">
+                            David Warner
+                        </div>
+                    </div>
+                    <div class="section-main-sidebar-info-row">
+                        <div class="section-main-sidebar-info-name">
+                            <i class="far fa-clock"></i>&nbsp;
+                            Duration 
+                        </div>
+                        <div class="section-main-sidebar-info-value">
+                            360 Hours 
+                        </div>
+                    </div>
+                    <div class="section-main-sidebar-info-row">
+                        <div class="section-main-sidebar-info-name">
+                            <i class="fas fa-book"></i>&nbsp;
+                            Lectures
+                        </div>
+                        <div class="section-main-sidebar-info-value">
+                            20 Lessons
+                        </div>
+                    </div>
+                    <div class="section-main-sidebar-info-row">
+                        <div class="section-main-sidebar-info-name">
+                            <i class="fas fa-users"></i>&nbsp;
+                            Enrolled 
+                        </div>
+                        <div class="section-main-sidebar-info-value">
+                            963 Students
+                        </div>
+                    </div>
+                    <div class="section-main-sidebar-info-row">
+                        <div class="section-main-sidebar-info-name">
+                            <i class="far fa-flag"></i>&nbsp;
+                            Language 
+                        </div>
+                        <div class="section-main-sidebar-info-value">
+                            English
+                        </div>
+                    </div>
+                    <div class="section-main-sidebar-info-row">
+                        <div class="section-main-sidebar-info-name">
+                            <i class="far fa-calendar-alt"></i>&nbsp;
+                            Deadline 
+                        </div>
+                        <div class="section-main-sidebar-info-value">
+                            06 March 2021
+                        </div>
+                    </div>
+                    <div class="section-main-sidebar-info-btn align-center">
+                        GET ENROLLED
+                        &emsp;
+                        <img src="images/long-arrow-right.png" alt="arrow">
+                    </div>
+                </div>
+                <img src="images/course-details/banner.png" alt="banner">
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <footer>
+        <div class="section-brands-background"></div>
+        <section class="section-brands">
+            <img src="images/brand1.png" alt="sponsor">
+            <img src="images/brand2.png" alt="sponsor">
+            <img src="images/brand3.png" alt="sponsor">
+            <img src="images/brand4.png" alt="sponsor">
+            <img src="images/brand5.png" alt="sponsor">
+        </section>
+        
+        <div class="footer-background"></div>
+        <section class="section-footer">
+            <div class="footer-socials">
+                <img src="images/EduPlusFooter.png" alt="logo">
+                <div class="footer-socials-background align-center"><i class="fab fa-facebook-f"></i></div>Facebook
+                <div class="footer-socials-background align-center"><i class="fab fa-youtube"></i></div> Youtube
+                <div class="footer-socials-background align-center"><i class="fab fa-twitter"></i></div> Twitter
+                <div class="footer-socials-background align-center"><i class="fab fa-instagram"></i></div> Instagram
+            </div>
+            <hr class="footer-line">
+            <div class="footer-links">
+                <div class="footer-links-paragraph">
+                    <p class="footer-links-paragraph-name"> Our Courses</p>
+                    <i class="fas fa-circle" style="color:#ea5822"></i> Web Development<br>
+                        Bussiness Studies<br>
+                        Computer Engineering<br>
+                        English Learning<br>
+                        Graphics Design
+                </div>
+                <div class="footer-links-paragraph" style="margin-top:66px;">
+                        Color Combinations<br>
+                        Software Development<br>
+                        Photography<br>
+                        Advance WordPress<br>
+                        Basic PSD To HTML
+                </div>
+                <div class="footer-links-paragraph">
+                    <p class="footer-links-paragraph-name">Company</p>
+                    About Eduket<br>
+                    Meet Advisors<br>
+                    Join A Career<br>
+                    Latest Courses<br>
+                    Newsletters
+                </div>
+                <div class="footer-links-newsletters">
+                    <p class="footer-links-paragraph-name">Newsletters</p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore perferendis voluptate necessitatibus, iure consequatur impedit laudantium numquam.
+                    <div class="footer-links-enterMail">
+                        <input type="text" placeholder="Enter Your Email">
+                        <div class="footer-link-enterMail-btn  align-center">
+                            <img src="images/long-arrow-right.png" class="long-arrow-right" alt="right-arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright align-center">
+                Copyright © 2020 EduPlus All Rights Reserved
+            </div>
+        </section>
+    </footer> 
+
+
+    <script charset="utf-8" src="./js/js.js"></script>
+    
+
+    <script>
+        var answers = document.getElementsByClassName("section-main-faq-answer");
+        for(i=0;i<answers.length;i++){
+            answers[i].style.display = "none";
+        }
+
+        function showAnswer(n){
+            var answers = document.getElementsByClassName("section-main-faq-answer");
+            var rightArrow = document.getElementsByClassName("fa-angle-right");
+            var downArrows = document.getElementsByClassName("fa-angle-down");
+            if(answers[n].style.display === "none"){
+                answers[n].style.display = "flex";
+                rightArrow[n].style.display = "none";
+                downArrows[n+4].style.display = "inline";
+            } else {
+                answers[n].style.display = "none";
+                rightArrow[n].style.display = "inline";
+                downArrows[n+4].style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

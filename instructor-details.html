@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="stylesheet" href="css/css.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src="https://kit.fontawesome.com/d6d235ec86.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+    
+        <style>
+            .section-team-member-socialsDropdownMenu-facebook, .section-team-member-socialsDropdownMenu-youtube, .section-team-member-socialsDropdownMenu-twitter{
+                margin:5px;
+                color:white;
+            }
+            .section-facts-fact{
+                filter:none;
+            }
+        </style>
+
+    </head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="index.html"><img src="images/EduPlus.jpg" alt="logo"></a>
+            <div class="navbar-hamburger-btn align-center" ><i class="fa fa-bars" onclick="showMenu()"></i></div>
+            <div class="navbar-signIn align-center"><i class="fas fa-user-circle" style="color:#ea5822;margin-right:4px"></i>SIGN IN</div>
+        </div>
+        <ul class="navbar-middle" id="hamburger">
+            <li onclick="showSubMenu(0)">
+                Home<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <a href="about-us.html">  <li>About Us</li></a>
+                    <a href="faq.html"><li>Faq</li></a>
+                    <a href="instructor-details.html"><li>Instructor Details</li></a>
+    
+                </ul>
+            </li>
+            <li onclick="showSubMenu(1)">
+                Courses<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <a href="our-courses.html"><li>Our Courses</li></a>
+                    <a href="course-details.html"><li>Course Details</li></a>
+                </ul>
+            </li>
+            <li onclick="showSubMenu(2)">
+                Events<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <a href="event-details.html"> <li>Event Details</li></a>
+                </ul>
+            </li>
+            <li>Pages</li>
+            <li onclick="showSubMenu(3)">
+                Blog<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                   <a href="blog-grid.html">  <li> Blog Grid  </li></a>
+                   <a href="blog-details.html"> <li>Blog Details</li></a>
+                </ul>
+            </li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+        
+        <ul class="navbar-right">
+            <li class="align-center"><i class="fab fa-facebook-f"></i></li>
+            <li class="align-center"><i class="fab fa-youtube"></i></li>
+            <li class="align-center"><i class="fas fa-user-circle" style="color:#ea5822;margin-right:4px"></i>SIGN IN</li>
+            <li><img src="images/Bar.png" alt="bar"></li>
+        </ul>
+    </nav>
+    <main>
+        
+        <section class="section-photo align-center">
+            <img src="images/about-us/about-us.jpg" style="width: 100%;" alt="hero-photo"> 
+            <div class="section-photo-wrapper align-center" style="flex-direction: column;">
+                <h3 class="section-photo-text">Instructor Details</h3>    
+                <div class="section-photo-path">Home&emsp;>&emsp;Instructor Details</div>  
+            </div>     
+        </Section>
+        <div class="section-instructorDetails-background"></div>
+        <section class="section-instructorDetails-member">
+            <div class="section-instructorDetails-member-detail">
+                    <img src="images/instructor-details/member.png" alt="member">
+                
+                <div class="section-instructorDetails-member-info">
+                    <div class="section-instructorDetails-member-info-1">
+                        <div class="section-instructorDetails-member-info-1-name">Somalia D Silva </div>
+                        <div class="section-instructorDetails-member-info-1-subject">Math Teacher</div>
+                        <div class="section-instructorDetails-member-info-1-subject" style="font-weight: 500; border-bottom: none;margin-top: 20px;">
+                            <i class="fas fa-book" style="color:#ea5822"></i>&nbsp;
+                            750+ Courses
+                        </div>
+                    </div>
+                    <div class="section-instructorDetails-member-info-2 align-center">
+                        <div class="section-team-member-socialsDropdownMenu-facebook align-center">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="section-team-member-socialsDropdownMenu-twitter align-center">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="section-team-member-socialsDropdownMenu-youtube align-center">
+                            <i class="fab fa-youtube"></i>
+                        </div>         
+                        <div class="section-team-member-socialsDropdownMenu-facebook align-center" style="background-color: #008bf3;">
+                            <i class="fab fa-behance"></i>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-instructorDetails-member-aboutMe">
+                <div class="section-instructorDetails-member-aboutMe-title">
+                    About me
+                </div>
+                <div class="section-instructorDetails-member-aboutMe-text">
+                    Integer lacinia. Praesent id justo in neque elementum ultrices. Mauris metus. 
+                    Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Morbi scelerisque luctus velit. 
+                    Praesent id justo in neque elementum ultrices. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. 
+                    Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Nullam sapien sem, 
+                    ornare ac, nonummy non, lobortis a enim. Praesent id justo in neque elementum ultrices. Cras elementum. 
+                    Integer lacinia. Praesent id justo in neque elementum ultrices. Mauris metus. 
+                    Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Morbi scelerisque luctus velit. 
+                    Praesent id justo in neque elementum ultrices. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. 
+                    Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Nullam sapien sem, 
+                    ornare ac, nonummy non, lobortis a enim. Praesent id justo in neque elementum ultrices. Cras elementum. 
+                </div>
+                <div class="section-instructorDetails-member-aboutMe-facts">
+                    <div class="section-facts-fact align-center">
+                        <i class="fas fa-users section-facts-icon"></i> 
+                        <div class="section-facts-fact-info">
+                            <span class="section-facts-fact-number">3045+</span><br>
+                            <span class="section-facts-fact-text">Saticified Students</span>
+                        </div>
+                    </div>
+                    <div class="section-instuctorDetails-member-aboutMe-facts-line"></div>
+                    <div class="section-facts-fact align-center">
+                        <i class="fas fa-book-open section-facts-icon"></i> 
+                        <div class="section-facts-fact-info">
+                            <span class="section-facts-fact-number">7825+</span><br>
+                            <span class="section-facts-fact-text">Available Courses</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-instructorDetails-member-education">
+            <div class="section-instructorDetails-member-certificates">
+                <div class="section-instructorDetails-member-aboutMe-title">
+                   Certifications
+                </div>
+                <div class="section-instructorDetails-member-aboutMe-text">
+                    Integer lacinia. Praesent id justo in neque elementum ultrices. Mauris metus. 
+                    Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Morbi scelerisque luctus velit. 
+                    Praesent id justo in neque elementum ultrices. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. 
+                    Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Nullam sapien sem, 
+                    ornare ac, nonummy non, lobortis a enim. Praesent id justo in neque elementum ultrices. Cras elementum. 
+                </div>
+                <div class="section-instructorDetails-member-certificates-imgs">
+                    <img src="images/instructor-details/certifications/1.png" alt="1">
+                    <img src="images/instructor-details/certifications/2.png" alt="2">
+                    <img src="images/instructor-details/certifications/3.png" alt="3">
+                </div>
+            </div>
+            <div class="section-instructorDetails-member-education-info">
+                
+                <div class="section-instructorDetails-member-aboutMe-title">
+                    Educations
+                </div>
+                <div class="section-instructorDetails-member-education-info-row">
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+    </main>
+    <footer>
+        <div class="section-brands-background"></div>
+        <section class="section-brands">
+            <img src="images/brand1.png" alt="sponsor">
+            <img src="images/brand2.png" alt="sponsor">
+            <img src="images/brand3.png" alt="sponsor">
+            <img src="images/brand4.png" alt="sponsor">
+            <img src="images/brand5.png" alt="sponsor">
+        </section>
+        
+        <div class="footer-background"></div>
+        <section class="section-footer">
+            <div class="footer-socials">
+                <img src="images/EduPlusFooter.png" alt="logo">
+                <div class="footer-socials-background align-center"><i class="fab fa-facebook-f"></i></div>Facebook
+                <div class="footer-socials-background align-center"><i class="fab fa-youtube"></i></div> Youtube
+                <div class="footer-socials-background align-center"><i class="fab fa-twitter"></i></div> Twitter
+                <div class="footer-socials-background align-center"><i class="fab fa-instagram"></i></div> Instagram
+            </div>
+            <hr class="footer-line">
+            <div class="footer-links">
+                <div class="footer-links-paragraph">
+                    <p class="footer-links-paragraph-name"> Our Courses</p>
+                    <i class="fas fa-circle" style="color:#ea5822"></i> Web Development<br>
+                        Bussiness Studies<br>
+                        Computer Engineering<br>
+                        English Learning<br>
+                        Graphics Design
+                </div>
+                <div class="footer-links-paragraph" style="margin-top:66px;">
+                        Color Combinations<br>
+                        Software Development<br>
+                        Photography<br>
+                        Advance WordPress<br>
+                        Basic PSD To HTML
+                </div>
+                <div class="footer-links-paragraph">
+                    <p class="footer-links-paragraph-name">Company</p>
+                    About Eduket<br>
+                    Meet Advisors<br>
+                    Join A Career<br>
+                    Latest Courses<br>
+                    Newsletters
+                </div>
+                <div class="footer-links-newsletters">
+                    <p class="footer-links-paragraph-name">Newsletters</p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore perferendis voluptate necessitatibus, iure consequatur impedit laudantium numquam.
+                    <div class="footer-links-enterMail">
+                        <input type="text" placeholder="Enter Your Email">
+                        <div class="footer-link-enterMail-btn  align-center">
+                            <img src="images/long-arrow-right.png" class="long-arrow-right" alt="right-arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright align-center">
+                Copyright © 2020 EduPlus All Rights Reserved
+            </div>
+        </section>
+    </footer> 
+
+
+    <script charset="utf-8" src="./js/js.js"></script>
+    
+</body>
+</html>

@@ -51,7 +51,9 @@ function myFunction() {
 
   if(screen.width > 576){
     document.getElementById("hamburger").style.display = "flex";
-  } 
+  } else {
+    document.getElementById("hamburger").style.display = "none";
+  }
   
 }
 
