@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="stylesheet" href="css/css.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src="https://kit.fontawesome.com/d6d235ec86.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+    
+        <style>
+            .section-main-faq-question{
+                font-size: 18px;
+                margin-top: 15px;
+            }
+            .section-main-faq-answer{
+                background-color: white;
+                border:none;
+                padding: 0px;
+            }
+            .section-main-faq-answer .section-main-text{
+                margin:15px 0 0 0;
+            }
+            .section-becomeInstructor-info-tag:nth-child(2), .section-becomeInstructor-info-tag:nth-child(1){
+                color:white;
+            }
+        </style>
+
+    </head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="index.html"><img src="images/EduPlus.jpg" alt="logo"></a>
+            <div class="navbar-hamburger-btn align-center" ><i class="fa fa-bars" onclick="showMenu()"></i></div>
+            <div class="navbar-signIn align-center"><i class="fas fa-user-circle" style="color:#ea5822;margin-right:4px"></i>SIGN IN</div>
+        </div>
+        <ul class="navbar-middle" id="hamburger">
+            <li onclick="showSubMenu(0)">
+                Home<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <a href="about-us.html">  <li>About Us</li></a>
+                    <a href="faq.html"><li>Faq</li></a>
+                    <a href="instructor-details.html"><li>Instructor Details</li></a>
+    
+                </ul>
+            </li>
+            <li onclick="showSubMenu(1)">
+                Courses<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <a href="our-courses.html"><li>Our Courses</li></a>
+                    <a href="course-details.html"><li>Course Details</li></a>
+                </ul>
+            </li>
+            <li onclick="showSubMenu(2)">
+                Events<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                    <a href="event-details.html"> <li>Event Details</li></a>
+                </ul>
+            </li>
+            <li>Pages</li>
+            <li onclick="showSubMenu(3)">
+                Blog<i class="fas fa-angle-down"></i>
+                <ul class="navbar-middle-dropdown">
+                   <a href="blog-grid.html">  <li> Blog Grid  </li></a>
+                   <a href="blog-details.html"> <li>Blog Details</li></a>
+                </ul>
+            </li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+        
+        <ul class="navbar-right">
+            <li class="align-center"><i class="fab fa-facebook-f"></i></li>
+            <li class="align-center"><i class="fab fa-youtube"></i></li>
+            <li class="align-center"><i class="fas fa-user-circle" style="color:#ea5822;margin-right:4px"></i>SIGN IN</li>
+            <li><img src="images/Bar.png" alt="bar"></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="section-photo align-center">
+            <img src="images/about-us/about-us.jpg" style="width: 100%;" alt="hero-photo"> 
+            <div class="section-photo-wrapper align-center" style="flex-direction: column;">
+                <h3 class="section-photo-text">F&Q</h3>    
+                <div class="section-photo-path">Home&emsp;>&emsp;F&Q</div>  
+            </div>     
+        </Section>
+        <div class="section-faq-content-background"></div>
+        <section class="section-faq-content">
+            <div class="section-faq-content-person align-center">
+                <img src="images/faq/avatar.png" alt="avatar">
+                <div class="section-faq-content-person-name">
+                    David Warner
+                </div>
+                <div class="section-faq-content-person-role">
+                    CEO & Founder
+                </div>
+                <div class="section-faq-content-person-text">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
+                </div>
+            </div>
+            <div class="section-faq-content-questions">
+                <div class="section-main-title">
+                    Frequently Asked Questions
+                </div>
+                <div class="section-main-faq-question" onclick="showAnswer(0)">
+                    <div class="section-main-lesson-name">Avoid Keyboard Event-Related Bugs Browser-Based Transliteration</div>
+                    <div class="section-main-lesson-details"><i class="fas fa-angle-right"></i><i class="fas fa-angle-down"></i></div>
+                </div>
+                <div class="section-main-faq-answer">
+                    
+                    <div class="section-main-text">
+                        Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                    </div>
+                </div>
+                <div class="section-main-faq-question" onclick="showAnswer(1)">
+                    <div class="section-main-lesson-name">Introducing Alpine.js: A Tiny JavaScript Framework</div>
+                    <div class="section-main-lesson-details"><i class="fas fa-angle-right"></i><i class="fas fa-angle-down"></i></div>
+                </div>
+                <div class="section-main-faq-answer">
+                    
+                    <div class="section-main-text">
+                        Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                    </div>
+                </div>
+                <div class="section-main-faq-question" onclick="showAnswer(2)">
+                    <div class="section-main-lesson-name">Why Are We Talking About CSS4?</div>
+                    <div class="section-main-lesson-details"><i class="fas fa-angle-right"></i><i class="fas fa-angle-down"></i></div>
+                </div>
+                <div class="section-main-faq-answer">
+                    
+                    <div class="section-main-text">
+                        Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                    </div>
+                </div>
+                <div class="section-main-faq-question" onclick="showAnswer(3)">
+                    <div class="section-main-lesson-name">When You Find A Good Idea, Look For A Better One</div>
+                    <div class="section-main-lesson-details"><i class="fas fa-angle-right"></i><i class="fas fa-angle-down"></i></div>
+                </div>
+                <div class="section-main-faq-answer">
+                    
+                    <div class="section-main-text">
+                        Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                    </div>
+                </div>
+                <div class="section-main-faq-question" onclick="showAnswer(4)">
+                    <div class="section-main-lesson-name">Inspired Design Decisions Neville Design Cannot Remain Neutral</div>
+                    <div class="section-main-lesson-details"><i class="fas fa-angle-right"></i><i class="fas fa-angle-down"></i></div>
+                </div>
+                <div class="section-main-faq-answer">
+                    
+                    <div class="section-main-text">
+                        Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                    </div>
+                </div>
+                <div class="section-main-faq-question" onclick="showAnswer(5)">
+                    <div class="section-main-lesson-name">Inspired Design Decisions Neville Design Cannot Remain Neutral</div>
+                    <div class="section-main-lesson-details"><i class="fas fa-angle-right"></i><i class="fas fa-angle-down"></i></div>
+                </div>
+                <div class="section-main-faq-answer">
+                    
+                    <div class="section-main-text">
+                        Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                    </div>
+                </div>
+                <div class="section-main-faq-question" onclick="showAnswer(6)">
+                    <div class="section-main-lesson-name">Embrace The Possibilities March 2020 Wallpapers</div>
+                    <div class="section-main-lesson-details"><i class="fas fa-angle-right"></i><i class="fas fa-angle-down"></i></div>
+                </div>
+                <div class="section-main-faq-answer">
+                    
+                    <div class="section-main-text">
+                        Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                    </div>
+                </div>
+                <div class="section-main-faq-question" onclick="showAnswer(7)">
+                    <div class="section-main-lesson-name">Embrace The Possibilities March 2020 Wallpapers</div>
+                    <div class="section-main-lesson-details"><i class="fas fa-angle-right"></i><i class="fas fa-angle-down"></i></div>
+                </div>
+                <div class="section-main-faq-answer">
+                    
+                    <div class="section-main-text">
+                        Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                    </div>
+                </div>
+                <div class="section-main-faq-question" onclick="showAnswer(8)">
+                    <div class="section-main-lesson-name">Embrace The Possibilities March 2020 Wallpapers</div>
+                    <div class="section-main-lesson-details"><i class="fas fa-angle-right"></i><i class="fas fa-angle-down"></i></div>
+                </div>
+                <div class="section-main-faq-answer">
+                    
+                    <div class="section-main-text">
+                        Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                    </div>
+                </div>
+                <div class="section-main-faq-question" onclick="showAnswer(9)">
+                    <div class="section-main-lesson-name">Embrace The Possibilities March 2020 Wallpapers</div>
+                    <div class="section-main-lesson-details"><i class="fas fa-angle-right"></i><i class="fas fa-angle-down"></i></div>
+                </div>
+                <div class="section-main-faq-answer">
+                    
+                    <div class="section-main-text">
+                        Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Curabitur vitae diam non enim vestibulum interdum. Fusce nibh. 
+                    Donec vitae arcu. Nullam rhoncus aliquam metus. Donec vitae arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. 
+                    </div>
+                </div>
+            </div>
+            <div class="section-faq-content-msg">
+                <div class="section-main-title">
+                    Get In Touch
+                </div>
+                <div class="section-faq-content-msg-row">
+                   <input type="text" placeholder="Your Name">  <i class="fas fa-user"></i>
+                </div>
+                <div class="section-faq-content-msg-row">
+                    <input type="text" placeholder="Your Email"><i class="fas fa-envelope"></i>
+                </div>
+                <div class="section-faq-content-msg-row" style="height: 120px;">
+                    <textarea placeholder="Write Message" ></textarea><i class="fas fa-envelope"></i>
+                </div>
+                <div class="section-faq-content-msg-btn align-center">
+                    SENG MESSAGE&emsp;<img src="images/long-arrow-right.png">
+                </div>
+            </div>
+        </section>
+        <div class="section-faq-cta-background-left"></div>
+        <div class="section-faq-cta-background-right"></div>
+        <section class="section-faq-cta">
+            <div class="section-faq-cta-content">
+                <div class="section-becomeInstructor-info-tag white"><img src="images/white_ellipsis.png" class="ellipsis" alt="ellipsis">&nbsp;Build A Career</div> 
+                <h3 class="section-becomeInstructor-info-tag">Become an Instructor</h3>
+                <div class="section-faq-cta-text">
+                    Integer imperdiet lectus quis justo. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+                </div>
+                <div class="section-faq-cta-btn align-center">
+                    SENG MESSAGE&emsp;<img src="images/long-arrow-right.png">
+                </div>
+            </div>
+            <div class="section-faq-cta-content">
+                <div class="section-becomeInstructor-info-tag white"><img src="images/white_ellipsis.png" class="ellipsis" alt="ellipsis">&nbsp;Build A Career</div> 
+                <h3 class="section-becomeInstructor-info-tag">Become a Partner</h3>
+                <div class="section-faq-cta-text">
+                    Integer imperdiet lectus quis justo. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+                </div>
+                <div class="section-faq-cta-btn align-center" style="background-color: #3662ff;">
+                    CONTACT US&emsp;<img src="images/long-arrow-right.png">
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <footer>
+        <div class="section-brands-background"></div>
+        <section class="section-brands">
+            <img src="images/brand1.png" alt="sponsor">
+            <img src="images/brand2.png" alt="sponsor">
+            <img src="images/brand3.png" alt="sponsor">
+            <img src="images/brand4.png" alt="sponsor">
+            <img src="images/brand5.png" alt="sponsor">
+        </section>
+        
+        <div class="footer-background"></div>
+        <section class="section-footer">
+            <div class="footer-socials">
+                <img src="images/EduPlusFooter.png" alt="logo">
+                <div class="footer-socials-background align-center"><i class="fab fa-facebook-f"></i></div>Facebook
+                <div class="footer-socials-background align-center"><i class="fab fa-youtube"></i></div> Youtube
+                <div class="footer-socials-background align-center"><i class="fab fa-twitter"></i></div> Twitter
+                <div class="footer-socials-background align-center"><i class="fab fa-instagram"></i></div> Instagram
+            </div>
+            <hr class="footer-line">
+            <div class="footer-links">
+                <div class="footer-links-paragraph">
+                    <p class="footer-links-paragraph-name"> Our Courses</p>
+                    <i class="fas fa-circle" style="color:#ea5822"></i> Web Development<br>
+                        Bussiness Studies<br>
+                        Computer Engineering<br>
+                        English Learning<br>
+                        Graphics Design
+                </div>
+                <div class="footer-links-paragraph" style="margin-top:66px;">
+                        Color Combinations<br>
+                        Software Development<br>
+                        Photography<br>
+                        Advance WordPress<br>
+                        Basic PSD To HTML
+                </div>
+                <div class="footer-links-paragraph">
+                    <p class="footer-links-paragraph-name">Company</p>
+                    About Eduket<br>
+                    Meet Advisors<br>
+                    Join A Career<br>
+                    Latest Courses<br>
+                    Newsletters
+                </div>
+                <div class="footer-links-newsletters">
+                    <p class="footer-links-paragraph-name">Newsletters</p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore perferendis voluptate necessitatibus, iure consequatur impedit laudantium numquam.
+                    <div class="footer-links-enterMail">
+                        <input type="text" placeholder="Enter Your Email">
+                        <div class="footer-link-enterMail-btn  align-center">
+                            <img src="images/long-arrow-right.png" class="long-arrow-right" alt="right-arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright align-center">
+                Copyright © 2020 EduPlus All Rights Reserved
+            </div>
+        </section>
+    </footer> 
+
+
+    <script charset="utf-8" src="./js/js.js"></script>
+    <script>
+        var answers = document.getElementsByClassName("section-main-faq-answer");
+        for(i=0;i<answers.length;i++){
+            answers[i].style.display = "none";
+        }
+
+        function showAnswer(n){
+            
+            var questions = document.getElementsByClassName("section-main-lesson-name");
+            var answers = document.getElementsByClassName("section-main-faq-answer");
+            var rightArrow = document.getElementsByClassName("fa-angle-right");
+            var downArrows = document.getElementsByClassName("fa-angle-down");
+            if(answers[n].style.display === "none"){
+                answers[n].style.display = "flex";
+                rightArrow[n].style.display = "none";
+                downArrows[n+4].style.display = "inline";
+                questions[n].style.color = "#ea5822"
+            } else {
+                answers[n].style.display = "none";
+                rightArrow[n].style.display = "inline";
+                downArrows[n+4].style.display = "none";
+                questions[n].style.color = "initial"
+            }
+        }
+    </script>
+</body>
+</html>
